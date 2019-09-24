@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@font-face{font-family: 'gulim07'; src:url(../font/Gulim070.ttf) format('truetype');}
+	
+	.div1{
+	height:80px; width:50%;
+	margin-top:100px;}
+	      
+	div .table{
+ 	margin-top:300px;
+ 	width:50%;
+ 	width:200px;
+	}     
+	 
+ 	.div2{
+ 	margin-top:50px;
+   	font-family: gulim07;
+   	font-weight: normal;
+   	font-size: 22px;		
+   	}
+   	
+	#img1{margin-top:-50px;}
+	 
+ 	img#img2{margin-top:40px;}
+	 
+ 	p{
+ 	font-family: gulim07;
+   	color: #b2b2b2;
+   	font-size:15px;}
+	   
+  	table{
+  	border-collapse: collapse;
+	border-radius:10px;
+	border:3px solid #cccccc;} 
+  
+  	.div3{
+  	margin-left:350px;
+  	}
+  		
+  	div.div3{margin-bottom:-45px;}		
+  
+  	textarea{
+  	border-radius: 10px;
+  	border:3px solid #c7e0e0;}
+	  		
+ 	#p2{
+ 	color:#a9b7ce;
+    font-family: gulim07;
+    }
+	     
+	#button_back{
+	border: 1px solid #BDBDBD;
+	border-style : solid;
+	inline: 0;
+	background-color: #EAEAEA;
+	width:90px;
+	height:40px;
+	font-size: 15px;	
+	font-weight: bold;
+	color:black;	
+	}
+	
+	#button_comment{
+	font-family: 'gulim07';
+	border: 1px solid #BDBDBD;
+	border-radius: 5px;
+	border-style : solid;
+	inline: 0;
+	background-color: #C6E0E0;
+	width:70px;
+	height:40px;
+	font-size: 20px;
+	text-align :center;	
+	color:#8C8C8C;
+	display: block;
+	margin-top: 20px;
+	}

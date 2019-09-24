@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face{font-family: 'gulim07'; src:url(../font/Gulim070.ttf) format('truetype');}
+		
+		div{
+			margin-top:100px;
+		}
+		
+		img{
+			
+			border-color: white;
+			border:0;
+			outline:0;
+
+		}
+		
+		.table{
+			
+		}
+		
+		.table th{
+			 width:95px;
+			 padding:5px;
+			 vertical-align: middle;
+			 border-bottom: 1px solid #ccc;
+			 font-weight: normal;
+			 font-family: gulim07;
+			 font-size: 14px;
+			 
+		}
+		
+		.table td{
+		 	width: 100px;
+   			padding: 5px;
+   			vertical-align: middle;
+   	 		border-bottom: 1px solid #ccc;
+		}
+		
+		
+		.table .head{
+			font-size:25px;
+			}
+
+	 	table .col{ width:52px;
+					padding-right:5px;
+					/* vertical-align: top; */
+					border-bottom: 1px solid #ccc;
+					background: #efefef;}	
+				 
+		table .head{background:#ccc;}	
+		
+		a{
+			color:#595959;
+			text-decoration: none;
+		
+		}		
+		a:hover{
+			color:#565656;
+			text-decoration: none;
+			cursor:pointer;
+		}
+		
+		#button {
+		border: 1px solid #BDBDBD;
+		border-style : solid;
+		inline: 0;
+		border-radius:10px;
+		background-color: #EAEAEA;
+		width:80px;
+		height:30px;
+		font-size: 17px;	
+		font-weight: bold;
+		color:black;
