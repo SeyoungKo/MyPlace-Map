@@ -1,0 +1,76 @@
+@charset "UTF-8";
+	#join{
+	margin-bottom:30px;
+	}
+	
+	#bigtable{
+	padding : 10px;
+	margin-top: 50px;
+	border-radius: 10px;
+	border : 1px solid gray;
+	width: 500px;
+	margin:auto;
+	}
+	
+	input#button{
+	width : 150px;
+	height : 50px;
+	border: 0;
+	outline : 0;
+	border-radius:8px; 
+	background-color: #8bd1d6;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	}
+	
+	img#button{
+	width: 100px;
+	height: 40px;
+	}
+	
+	img.img{
+	width: 100px;
+	height: 40px;
+	margin-top:30px;
+	margin-right:20px;
+	}
+	
+	* input{
+	width: 200px;
+	height : 30px;
+	margin-top:30px;
+	text-align: center;
+	}
+	
+	input#age{
+	margin-left:20px;
+	margin-right:5px;
+	width: 50px;
+	text-align:center;
+	}
+	
+	input#radio{
+	display:inline;
+	width: 30px;
+	}
+	
+	button#button{
+	margin-top:50px;
+	border: 0;
+	outline : 0;
+	border-radius:12px; 
+	background-color: white;
+	}
+	
+	
+	input#check_button{
+	width:70px; 
+	height:30px; 
+	margin:5px; 
+	border-radius:12px; 
+	border-color: gray;
+	border-style: dashed; 
+	background : white;
+	text-align:center;
+	}
