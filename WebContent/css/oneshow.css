@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+	@font-face { font-family: 'NanumGothic'; src: url(../font/나눔고딕코딩.TTF) format('truetype'); }
+	
+	table { 
+	font-family: NanumGothic; 
+	}
+
+	#td_img{	
+	border:white;
+	}
+	
+	#td_bold_center{
+	font-weight: bold;
+	text-align: center;
+	}
+
+	td{
+	padding:10px;
+	border-radius:10px;
+	border:1px solid black;
+	text-align:justify;
+	}
+	
+	#th_info{
+	width: 100px;
+	border: 1px solid black;
+	background-color: #F6F6F6;
+	margin-right: 10px;	
+	}
+
+	#info_title{ /* 등록된 정보 */
+	font-family: NanumGothic;
+	font-size:40px;
+	font-weight:bold;
+	mragin-top: 300px;
+	margin-bottom: 20px;
+	}
+	
+	#img{
+	margin:0;
+	border-radius:10px;
+	width:550;
+	}
+	
+	#button {
+	border: 0;
+	inline: 0;
+	margin-top:30px;
+	border-radius:20px;
+	background-color: #80D7E5;
+	width:150px;
+	height:50px;
+	font-size: 20px;	
+	font-weight: bold;
+	color:white;
+	}
