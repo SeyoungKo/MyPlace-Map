@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.grid-container{
+					display: inline-grid;
+					grid-template-columns: auto auto auto;
+					background-color:#fff2ea;
+					margin-top:20px;	
+					margin-left:20px;
+					margin-right:20px;
+					margin-bottom:20px;
+					
+					width: 45%;
+					border: 1px solid #f4f4f4;
+					
+					
+
+					}
+					
+	.gird_item{		
+					padding: 200px;
+		
+			
+					}	
