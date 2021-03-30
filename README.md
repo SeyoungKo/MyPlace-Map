@@ -20,6 +20,10 @@ ojdbc6.jar
 ```
 mybatis-3.1.1.jar
 ```
+- tomcat
+```
+tomcat v8.5
+```
 - etc
   - cos.jar
   - taglibs-standard-impl-1.2.5.jar
@@ -120,5 +124,5 @@ mybatis-3.1.1.jar
  
  ### 3. 구동 방식
  
- ### 4. 실행예시 화면
+ ### 4. 실행 예시 화면
 <img width="1063" alt="스크린샷 2021-03-30 오전 11 18 57" src="https://user-images.githubusercontent.com/39934875/112923553-76667b80-9149-11eb-9b70-11d07633ead8.png">
