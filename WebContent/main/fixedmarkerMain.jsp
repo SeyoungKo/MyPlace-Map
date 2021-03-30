@@ -7,6 +7,7 @@
 
  		var list = [];
 		var latlng = [];
+
 	<c:forEach items="${list}" var= "item" varStatus="status">
 		
 		list.push("${item.id}");
@@ -28,9 +29,6 @@
 		lat.push(tmp1[i-1]);
 		lng.push(tmp2[i-1]);
 		}
-
-
- 
 		 
 		var positions = [];
 		
@@ -40,14 +38,9 @@
 		var imageSrc = "../icon/heartIcon.png";		    
 
 		for (var i = 0; i < positions.length; i ++) {
-		    
 		  
-		    var imageSize = new daum.maps.Size(30, 33); 
-		    
-		
-		    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
-		    
-		   
+		    var imageSize = new daum.maps.Size(30, 33);
+		    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize);
 		    var marker = new daum.maps.Marker({
 		        map: map,
 		        position: positions[i], 

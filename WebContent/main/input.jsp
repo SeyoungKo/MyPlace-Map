@@ -30,85 +30,58 @@
 			                newPreview.appendChild(ImagePre);
 			            }
 			            ImagePre.src = Event.target.result;
-			            
 			        };
 			 
 			        return function () {
-			         
-			        	/*img : 파일이름  */
-			            var img = document.getElementById("image").files;
-			           
-			            if (!fileType.test(img[0].type)) { 
-			             alert("이미지 파일을 업로드 하세요"); 
-			             return; 
-			            }
-			            
-			            ImgReader.readAsDataURL(img[0]);
-			        }
-			 
+						/*img : 파일이름  */
+						var img = document.getElementById("image").files;
+
+						if (!fileType.test(img[0].type)) {
+							alert("이미지 파일을 업로드 하세요");
+							return;
+						}
+						ImgReader.readAsDataURL(img[0]);
+					}
 			    }
 			  
 			})();
 		
 		function choice(c) {
 			document.getElementById("cate").value=c.value;
-			
 			c.style="background:#b5e4f2";
 			
 			for (var i = 0; i < 5; i++) {
 				document.getElementsByTagName("button")[i].disabled=true;
-
-			}//for
-			
-		}//choice
+			}
+		}
 		
 		function input(f) {
 			if(f.category.value.trim()==''){
 				alert("카테고리를 선택해주세요");
 				return;
-				
-			}//if
-			
+			}
 			if(f.photo_show.value.trim()==''){
 				alert("사진 제목을 입력해주세요");
 				return;
-				
-			}//if
-			
+			}
 			if(f.photo_name.value.trim()==''){
 				alert("사진을 첨부해주세요");
 				return;
-				
-			}//if
-			
+			}
 			if(f.content.value.trim()==''){
 				alert("메모를 해주세요");
 				return;
-				
-			}//if
-			
+			}
 			var go=confirm("공유 게시판에도 등록 하시겠습니까?");
 			if(go==true){
 				f.share.value="1";
-				
-			}//if
-			
+			}
 			f.submit();
-			
-		}//input
-		
-		/* function back(f) {
-			f.action="main.do";
-			f.submit();
-			
-		}//back */
+		}
 		
 	</script>
-	
-
 </head>
 <body>
-
 	<div align="center">
 		<form name="formName" action="oneshow.do" method="POST" enctype="multipart/form-data">
 			<table border="0">
@@ -120,28 +93,22 @@
 	               		<addr title="명소"><button id="명소" value="placeIcon"  onclick="choice(this)"><img src="../icon/placeIcon.png"></button></addr>
 	               	    <addr title="여행"><button id="여행" value="carIcon"  onclick="choice(this)"><img src="../icon/carIcon.png"></button></addr>
 	              	    <addr title="기타"><button id="기타" value="userAddIcon"  onclick="choice(this)"><img src="../icon/userAddIcon.png"></button></addr>
-	                  
 					</td>
-					
 				</tr>
 				
 				<tr>
 					<th><img class="img1" src="../image/photoName.png"style="height:40px; width:110px; margin-left:80px;" ></th>
 					<td><input name="photo_show" style="width:263px; height:40px;"></td>
-					
 				</tr>
 	
 				<tr>
 					<th><img class="img1" src="../image/photoUpload.png"style="height:40px; width: 110px; margin-left:80px;"></th>
 					<td width = "200" height="80" id="imagePreview" ><input type="file" height="30"  name = "photo_name" id="image" onchange="InputImage();"></td>
-					
 				</tr>
 				
 				<tr>
 					<th><img class="img1" src="../image/photoMemo.png"style="height:40px; width: 110px;  margin-left:80px;"></th>
-	
 					<td><textarea cols="30" rows="10" name="content" style="width:263px;"></textarea></td>
-					
 				</tr>
 			
 				<tr>
@@ -158,9 +125,7 @@
 			<input type="hidden" name="memo" value="${vo.memo}">
 			<input type="hidden" id="cate" name="category">
 			<input type="hidden" name="share" value="0">
-			
 		</form>
-	
 	</div>
 
 </body>

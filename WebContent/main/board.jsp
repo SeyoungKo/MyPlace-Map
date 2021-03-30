@@ -26,14 +26,14 @@
 			for (var i = 0; i < 5; i++) {
 				document.getElementsByTagName("button")[i].disabled=true;
 
-			}//for
+			}
 
-		}//choice
+		}
 		
 		function search(f) {
 			f.submit();
 
-		}//search
+		}
 		
 	</script>
 			<link rel="stylesheet" type="text/css" href="../css/board.css"> 

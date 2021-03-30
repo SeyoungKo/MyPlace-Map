@@ -30,7 +30,7 @@ public class LoginCheckAction extends HttpServlet {
 		if( vo == null ) {
 			res = "yes";
 			
-		}//if
+		}
 		
 		String resultStr = String.format("[{'result':'%s'}, {'id':'%s'}]", res, id);
 		response.setContentType("text/plain;charset=UTF-8");

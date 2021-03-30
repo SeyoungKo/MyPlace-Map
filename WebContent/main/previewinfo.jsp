@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <%@taglib prefix ="c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="../layout/check_login.jsp"%>
 
-<%@ include file="../layout/check_login.jsp"%>  
 <head>
 
 	<link rel="stylesheet" type="text/css" href="../css/previewinfo.css"> 
@@ -11,42 +10,27 @@
 <body>
 <script>
 	function mouseOver(c) {
-	 	var tmp = c.id; // 클릭한 Gridlayout 인덱스
-
-		var arr = []; //latlng vo값
+	 	var tmp = c.id;
+		var arr = [];
 		var cateArr = [];
- 
-		
-			for (var i = 1; i <= ${list.size()}; i++) {
-				arr[i-1] = document.getElementById("latlng"+i).innerHTML;
-	
-				cateArr.push(arr[i-1]);		
-			}
-			
-		
-			
-		 	var reply_click = cateArr[tmp-1]; //클릭하면 넘어오는 latlng값
-			var sub1= reply_click.substr(1,9); //() 지운 latlng
-			
-			var lastIdx = reply_click.indexOf(",")+1;
-		
-			var sub2 = reply_click.substr(lastIdx,13);
-			
-			
-			sub2.toString();
- 
-	    
+
+		for (var i = 1; i <= ${list.size()}; i++) {
+			arr[i-1] = document.getElementById("latlng"+i).innerHTML;
+			cateArr.push(arr[i-1]);
+		}
+		var reply_click = cateArr[tmp-1];
+		var sub1= reply_click.substr(1,9);
+		var lastIdx = reply_click.indexOf(",")+1;
+		var sub2 = reply_click.substr(lastIdx,13);
+
+		sub2.toString();
+
 		var moveLatLon = new daum.maps.LatLng(sub1,sub2);
-		
-	
-	    // 지도 중심을 부드럽게 이동시킵니다
-	    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+
 	    map.panTo(moveLatLon);  
 	}
 		
 </script>
-
-
 <table class = "table1">
 		<c:forEach var="vo" items="${list}" varStatus="status">
 			<tr style="display:none">
@@ -61,25 +45,19 @@
 			</tr>
 			
 		</c:forEach>
-		</table>
-		
-
-	
+</table>
 		<div class = "grid-container" >
 			<c:forEach var = "vo" items ="${list}" varStatus = "status" >
-			
-	<form name ="formName">
-			<div class = "grid_item">
-				<img src = "../upload/${vo.photo_name}" id= "${status.count}" onclick="mouseOver(this)" 
-							style="opacity:0.9; margin-top:10px; margin-bottom:10px; margin-right:5px;
-								   margin-left:5px;"  
-							onmouseover="this.style.opacity='1'"
-							onmouseout="this.style.opacity='0.9'" width = "180" height="180" 
-							  >		
-					<a href="testt2.jsp"></a>				
-							</div>	
-							
-		</form>	
+				<form name ="formName">
+						<div class = "grid_item">
+							<img src = "../upload/${vo.photo_name}" id= "${status.count}" onclick="mouseOver(this)"
+										style="opacity:0.9; margin-top:10px; margin-bottom:10px; margin-right:5px;
+											   margin-left:5px;"
+										onmouseover="this.style.opacity='1'"
+										onmouseout="this.style.opacity='0.9'" width = "180" height="180">
+								<a href="testt2.jsp"></a>
+						</div>
+				</form>
 			</c:forEach>
 		</div>
 </body>	

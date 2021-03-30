@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%@ include file="../layout/check_login.jsp"%>
-
 <%@ include file = "/layout/header.jsp" %> 
 
 <!DOCTYPE html>
@@ -15,15 +13,12 @@
 		if(${res}=="1"){
 			alert("등록이 완료되었습니다");
 			
-		}//if
-	
+		}
 		function back(f) {
 			f.submit();
 			
-		}//back
-	
+		}
 	</script>
-	
 	<link rel='stylesheet' type='text/css' href="../css/oneshow.css"/>
 	
 </head>
@@ -45,11 +40,8 @@
 			<input type="hidden" name="photo_name" value="${vo.photo_name}">
 			
 			<div><input type="button" id="button" value="돌아가기" onclick="back(this.form)"></div>
-		
 		</form>
-	
 	</div>
-	
 </body>
 </html>
 

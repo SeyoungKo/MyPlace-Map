@@ -74,7 +74,7 @@ public class OneShowAction extends HttpServlet {
 		}else{
 			 res=MapDAO.getInstance().insert(vo);
 			
-		}//else_if
+		}
 		
 		request.setAttribute("vo",vo);
 		request.setAttribute("res", res);

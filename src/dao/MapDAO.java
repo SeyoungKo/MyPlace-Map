@@ -135,9 +135,7 @@ public class MapDAO {
 		return list;
 		
 	}
-	
-	
-	///////////////////////////회원가입 DAO//////////////////////////////////
+
 	public int userInsert(MapVO vo) {
 		SqlSession sqlSession = factory.openSession(true);
 		int res = sqlSession.insert("user.user_insert", vo);
@@ -161,15 +159,14 @@ public class MapDAO {
 		return list;
 		
 	}
-	
-	//***************Submenu********************
+
 	public List<MapVO> selectList(MapVO vo){
 		SqlSession sqlSession = factory.openSession();
 		List<MapVO> list = sqlSession.selectList("map.map_subMap",vo);
 		sqlSession.close();
 		return list;
 	}
-	//*************Schedule**************
+
 	public List<MapVO> sSelect(String id) {
 		SqlSession sqlSession = factory.openSession();
 		List<MapVO> list = sqlSession.selectList("schedule.schedule_select",id);

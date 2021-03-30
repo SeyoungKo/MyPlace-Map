@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ include file="../layout/check_login.jsp"%> 
-
+<%@ include file="../layout/check_login.jsp"%>
 <%@ include file = "/layout/header.jsp" %> 
 
 <!DOCTYPE html>
@@ -15,15 +13,11 @@
 		function back(f) {
 			f.submit();
 			
-		}//back()
-	
+		}
 	</script>
-	
 	<link rel='stylesheet' type='text/css' href="../css/oneshow.css"/>
-	
 </head>
 <body>
-	
 	<div align="center">
 		<form action="showall.do" method="post">
 			<table>
@@ -42,11 +36,8 @@
 			<input type="hidden" name="photo_name" value="${vo.photo_name}">
 		
 			<input type="button" id="button" value="돌아가기"  onclick="back(this.form)">
-		
 		</form>
-		
 	</div>
-
 </body>
 </html>
 
