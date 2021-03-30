@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="map">
+	<select id="map_shareselect" resultType="mv">
+		select * from map_share order by idx desc
+	
+	</select>
+
+	<select id="map_select" resultType="mv" parameterType="java.lang.String">
+		select * from map where id=#{id}
+		
+	</select>
+	
+	<select id="map_selectone" resultType="mv" parameterType="mv">
+		select * from map where id=#{id} and place=#{place} and category=#{category} 
+		
+	</select>
+
+	<select id="map_searchall" resultType="mv">
+		select * from map_share order by idx desc
+	
+	</select>
+	
+	<select id="map_search" resultType="mv" parameterType="mv">
+		select * from map_share where category=#{category} and area like concat(#{area},'%') order by idx desc
+	
+	</select>
+	
+	<select id="map_searchcate" resultType="mv" parameterType="java.lang.String">
+		select * from map_share where category=#{category} order by idx desc
+	
+	</select>
+	
+	<select id="map_searcharea" resultType="mv" parameterType="java.lang.String">
+		select * from map_share where area like concat(#{area},'%') order by idx desc
+	
+	</select>
+	
+	<insert id="map_insert" parameterType="mv">
+		insert into map values(
+			#{id},
+			#{category},
+			#{latlng},
+			#{area},
+			#{place},
+			#{memo},
+			#{content},
+			#{photo_name},
+			#{photo_show},
+			sysdate)
+			
+	</insert>
+	
+	<insert id="map_shareinsert" parameterType="mv">
+		insert into map_share values(
+			seq_board_idx.nextVal,
+			#{id},
+			#{category},
+			#{latlng},
+			#{area},
+			#{place},
+			#{memo},
+			#{content},
+			#{photo_name},
+			#{photo_show},
+			sysdate,
+			0)
+			
+	</insert>
+	
+	<select id="map_shareselectone" resultType="mv">
+		select * from map_share where idx=#{idx}
+	
+	</select>
+	
+	<update id="map_upreadhit" >
+		update map_share set readhit=readhit+1 where idx=#{idx}
+	
+	</update>
+	
+	<insert id="map_inscomment" parameterType="mv">
+		insert into map_comment values(
+			#{id},
+			#{text},
+			#{ip},
+			sysdate,
+			seq_comment_idx.nextVal,
+			#{idx})
+	
+	</insert>
+	
+	<select id="map_selcomment" resultType="mv">
+		select * from map_comment where idx=#{idx} order by ref desc
+	
+	</select>
+	
+		<select id="map_subMap" parameterType="mv" resultType="mv">
+		select * from map where id=#{id} and category=#{category}
+	</select>
+	
+</mapper>
+
+

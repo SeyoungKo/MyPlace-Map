@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+	#smallTable {
+	margin: 10px 0px 10px 0px;
+	border-radius: 10px;
+	background-color : #E7F8F9;
+	padding: 10px;
+	}
+	
+	#title {
+	width:380px;
+	height:70px;
+	margin-top:70px;
+	}
+	
+	input.img_button{
+	width:70px; 
+	height:35px;
+	margin-top:50px; 
+	margin:5px; 
+	border-radius:12px; 
+	border-style: dashed; 
+	background : white;
+	}
+
+	
+	#td{
+	border-radius:5px;
+	background-color: white;
+	font-size:15px;
+	font-weight: bold;
+	}
+	
+	div #view_table{
+	margin-top:40px;
+	}
+	
+	p{
+	margin-top:30px;
+	}

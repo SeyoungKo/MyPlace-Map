@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="schedule">
+	<select id="schedule_select" parameterType="java.lang.String" resultType="mv">
+		select * from schedule where id=#{id}
+	</select>
+	
+	<insert id="schedule_insert" parameterType="mv">
+		insert into schedule values(
+			seq_schedule_idx.nextVal,
+			#{id},
+			#{year},
+			#{month},
+			#{day},
+			#{endyear},
+			#{endmonth},
+			#{endday},
+			#{splace},
+			#{scontent}
+			)
+	</insert>
+	
+	 <delete id="schedule_delete" parameterType="int">
+		delete from schedule where idx=#{idx}
+	</delete>
+	
+	<select id="schdule_one" parameterType="int" resultType="vo.MapVO">
+		select * from schedule where idx=#{idx}
+	</select>
+	
+	<update id="schedule_update" parameterType="vo.MapVO">
+		update schedule set
+		#{idx},
+		#{id},
+		#{year},
+		#{month},
+		#{day},
+		#{endyear},
+		#{endmonth},
+		#{endday},
+		#{splace},
+		#{scontent}
+		
+	</update> 
+	
+</mapper>
+
+
