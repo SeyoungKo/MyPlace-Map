@@ -20,7 +20,7 @@ ojdbc6.jar
 ```
 mybatis-3.1.1.jar
 ```
-- tomcat
+- Tomcat
 ```
 tomcat v8.5
 ```
