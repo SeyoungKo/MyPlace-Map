@@ -1,6 +1,8 @@
 # MyPlaceMap
 카카오 오픈 API를 활용한 원하는 장소 저장 & 마커 생성 웹 프로젝트입니다.
 
+<img width="1063" alt="스크린샷 2021-03-30 오전 11 18 57" src="https://user-images.githubusercontent.com/39934875/112923553-76667b80-9149-11eb-9b70-11d07633ead8.png">
+
 ### 1. 프로젝트 소개 & 환경
 - Java
 ```java 15.0.2 2021-01-19
@@ -144,6 +146,3 @@ tomcat v8.5
    ```
    내가 선택한 핫플레이스들을 랜덤으로 보여줍니다. 
    ```
-  
- ### 4. 실행 예시 화면
-<img width="1063" alt="스크린샷 2021-03-30 오전 11 18 57" src="https://user-images.githubusercontent.com/39934875/112923553-76667b80-9149-11eb-9b70-11d07633ead8.png">
